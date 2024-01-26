@@ -80,11 +80,11 @@ useEffect (()=>{
                 </div>
                 <div id="form-control">
                     <label htmlFor="">Other :</label>
-                    <input className='text-black p-2' type="text" placeholder="Other income/expense"  onChange={inputTitle} value={title}/>
+                    <input className='text-black p-2 mb-3' type="text" placeholder="Other income/expense"  onChange={inputTitle} value={title}/>
                 </div>
-                <div id="form-control">
-                    <label htmlFor="">Amount :</label>
-                    <input className='text-black p-2' type="text" placeholder="+ income , - expense" name='newTodo' onChange={inputAmount} value={amount}/>
+                <div id="form-control" className='flex'>
+                    <label htmlFor="" className='font-bold mr-2'>Amount:</label>
+                    <input className='text-black p-2 mt-1 rounded-lg' type="text" placeholder="+ income , - expense" name='newTodo' onChange={inputAmount} value={amount}/>
                 </div>
                 <div>
                     <button  type="submit" disabled={!formValid}  id='btn'>Add</button>
