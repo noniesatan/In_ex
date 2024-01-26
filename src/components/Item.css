@@ -1,0 +1,19 @@
+#list{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.expense{
+    border-right: 7px solid red;
+}
+.income{
+    border-right: 7px solid green;
+}
