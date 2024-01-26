@@ -48,7 +48,7 @@ function App() {
 
     }}>
       <div id="appcon">
-        <h2 className="text-3xl font-bold text-blue-600 mb-5">Income - Expense App</h2>
+        <h2 className="text-3xl font-bold text-blue-600 mb-5  md:text-base">Income - Expense App</h2>
         <div className='text-blue-300 mb-2'>Date: {currentDate}</div>
         <ReportComponent/>
         <FormComponents onAddItem={onAddNewItem}/>
