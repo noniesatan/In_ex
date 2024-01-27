@@ -7,12 +7,12 @@ import PropsTypes from 'prop-types'
 
 
 const Item = (props) =>{
-   const {title,amount}  = props
+   const {title,amount,other}  = props
    const status = amount<0 ? "expense" : "income"
    const symbol = amount<0 ? "-" : "+"
     
     return(
-        <li id='list' className={status}>{title}<span>{symbol}{Math.abs(amount)}</span>
+        <li id='list' className={status}>{title}{other}<span>{symbol}{Math.abs(amount)}</span>
        
         </li>
     )
