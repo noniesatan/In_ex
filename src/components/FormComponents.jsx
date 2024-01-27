@@ -8,10 +8,14 @@ const FormComponents = (props) => {
     
     const [title,setTitle] = useState('')
     const [amount,setAmount] = useState(0)
+    const [other,setOther] = useState('')
     const [formValid,setFormValid] = useState(false)
 
     const inputTitle = (event)=>{
         setTitle(event.target.value)
+    }
+    const inputOther = (event)=>{
+        setOther(event.target.value)
     }
    
     const inputAmount = (event)=>{
@@ -24,22 +28,25 @@ const FormComponents = (props) => {
         const itemData = {
             id:uuidv4(),
             title: title,
-            amount: Number(amount)
+            amount: Number(amount),
+            other: other
         }
     //    console.log(itemData);
         // send the data to App.jsx child to mom
         props.onAddItem(itemData)
        setTitle('')
        setAmount(0)
+       setOther('')
     }
 useEffect (()=>{
-    const checkData = title.length>0  && amount !==0
-    
+    const checkData = title.length>0 || other.length>0 && amount !==0
+  
     
             setFormValid(checkData)
+          
     
     
-},[title,amount])
+},[title,amount,other])
 
 
     return(
@@ -80,7 +87,7 @@ useEffect (()=>{
                 </div>
                 <div id="form-control">
                     <label htmlFor="">Other :</label>
-                    <input className='text-black p-2 mb-3' type="text" placeholder="Other income/expense"  onChange={inputTitle} value={title}/>
+                    <input className='text-black p-2 mb-3' type="text" placeholder="Other income/expense"  onChange={inputOther} value={other}/>
                 </div>
                 <div id="form-control" className='flex'>
                     <label htmlFor="" className='font-bold mr-2'>Amount:</label>
