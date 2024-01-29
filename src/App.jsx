@@ -52,7 +52,7 @@ function App() {
         <div className='text-blue-300 mb-2'>Date: {currentDate}</div>
         <ReportComponent/>
         <FormComponents onAddItem={onAddNewItem}/>
-        <Transaction items ={items}/>
+        <Transaction items ={items} />
       </div>
     </DataContext.Provider>
   )

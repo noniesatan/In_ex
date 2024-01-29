@@ -1,14 +1,14 @@
 #list{
     color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-    padding: 15px;
+    padding: 5px;
     margin: 10px;
     border-radius: 10px;
-    position: relative;
+    
     
 }
 .expense{
@@ -16,4 +16,7 @@
 }
 .income{
     border-right: 7px solid green;
+}
+#btn-icon{
+    margin: 20px;
 }
